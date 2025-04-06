@@ -1,0 +1,126 @@
+/* Estilos gerais do corpo */
+body {
+    background-color: #170B3B;
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header e logo */
+header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: larger;
+    padding: 15px 30px;
+    background-color: #1a0a3c;
+}
+
+header h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+header a img {
+    height: 100px;
+}
+
+/* Navegação */
+nav {
+    display: flex;
+    gap: 50px;
+    font-size: 30px;
+    color: white;
+    background-color: #341948;
+    height: 60px; /* Altura da nav */
+    width: 100%;
+    border-radius: 5px;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Links da navegação */
+nav a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block; /* Permite que o link tenha altura e largura ajustáveis */
+    padding: 0 30px; /* Espaço adicional para o lado da palavra */
+    line-height: 60px; /* Alinha o texto verticalmente com a altura da nav */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+}
+
+/* Efeito de hover */
+nav a:hover {
+    color: white;
+    background-color: #41205a; /* Tom de roxo mais claro */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+
+/* Layout principal */
+main {
+    margin: 0 30px;
+}
+
+/* Layout da imagem e texto do jogo (NeonPunk e PancreasWorld) */
+.neonpunk, .pancreasworld, .GTA, .incasa {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+
+/* Imagem do jogo */
+.imagem img {
+    width: 1000px; /* Definir a largura da imagem para 1000px */
+    height: 500px; /* Definir a altura da imagem para 500px */
+    border-radius: 8px;
+}
+
+
+/* Texto sobre o jogo */
+.texto {
+    max-width: 600px;
+    text-align: left;
+    margin-left: 30px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.texto h1 {
+    font-size: 2rem;
+    color: #00ffcc;
+    margin-bottom: 15px;
+}
+
+.texto p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.texto ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.texto .btn-comprar {
+    padding: 12px 25px;
+    margin-top: 20px;
+    background-color: #ff007f;
+    color: #fff;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.texto .btn-comprar:hover {
+    background-color: #ff3399;
+}
