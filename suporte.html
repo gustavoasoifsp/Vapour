@@ -2,68 +2,133 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="Imgs/Icone do Site.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-    <title>Suporte - Vapour</title>
+    <title>Suporte - Vapour (Estilo AuraFlow)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Bebas+Neue&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- <link rel="icon" href="Imgs/Icone do Site.ico"> -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#8B5CF6',
+              secondary: '#EC4899',
+              dark: '#111827',
+              light: '#F9FAFB',
+              accent: '#10B981',
+              card: '#1f2937',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Bebas Neue', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
 </head>
-<body>
+<body class="bg-dark text-light font-sans antialiased">
 
-    <header>
-        <div>
-            <a href="index.html"><img src="Imgs/Logo Vapour Colorível.png" alt="Vapour" height="100px"></a>
+    <!-- Cabeçalho / Navbar (Idêntico ao index.html) -->
+    <header class="bg-dark shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="Imgs/Logo Vapour Colorível.png" alt="Vapour Logo" class="h-12 md:h-16">
+                <span class="text-3xl md:text-4xl font-heading text-primary hover:text-secondary transition-colors">Vapour</span>
+            </a>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="text-lg hover:text-primary transition-colors">HOME</a>
+                <a href="comunidade.html" class="text-lg hover:text-primary transition-colors">COMUNIDADE</a>
+                <a href="sobre.html" class="text-lg hover:text-primary transition-colors">SOBRE</a>
+                <a href="suporte.html" class="text-lg text-primary font-semibold border-b-2 border-primary">SUPORTE</a> <!-- Destaque página atual -->
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-light focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
         </div>
-        <div>
-            <h1><a href="index.html">Vapour</a></h1>
+        <div id="mobile-menu" class="hidden md:hidden bg-card">
+            <a href="index.html" class="block px-6 py-3 hover:bg-gray-700 transition-colors">HOME</a>
+            <a href="comunidade.html" class="block px-6 py-3 hover:bg-gray-700 transition-colors">COMUNIDADE</a>
+            <a href="sobre.html" class="block px-6 py-3 hover:bg-gray-700 transition-colors">SOBRE</a>
+            <a href="suporte.html" class="block px-6 py-3 bg-gray-700 text-primary transition-colors rounded-b-lg">SUPORTE</a>
         </div>
     </header>
 
-    <nav>
-        <a href="index.html">HOME</a>    <a href="comunidade.html">COMUNIDADE</a>    <a href="sobre.html">SOBRE</a>       <a href="suporte.html">SUPORTE</a>
-    </nav>
+    <main class="container mx-auto px-6 py-12">
+        <section class="bg-card p-8 md:p-12 rounded-xl shadow-2xl max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-8 text-center">
+                Central de Suporte Vapour: Números de Emergência (Use por sua conta e risco)
+            </h1>
 
-    <br>
+            <p class="text-gray-300 leading-relaxed text-lg mb-10 text-center">Se você enfrentar alguma das situações absurdas e caóticas que nossos jogos causaram, aqui estão os números de emergência que <span class="font-semibold text-secondary">PODEM</span> ajudar. (Ou não, você já foi avisado!)</p>
 
-    <main>
-        <div class="texto">
-            <h1>Central de Suporte - Números de Emergência</h1>
+            <div class="overflow-x-auto">
+                <table class="w-full min-w-full text-left border-collapse">
+                    <thead class="border-b-2 border-gray-700">
+                        <tr>
+                            <th class="px-6 py-4 text-lg font-heading text-accent uppercase tracking-wider">Número de Emergência</th>
+                            <th class="px-6 py-4 text-lg font-heading text-accent uppercase tracking-wider">Descrição (totalmente séria)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-700">
+                        <tr class="hover:bg-gray-800 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap text-xl font-semibold text-primary">190 - Polícia</td>
+                            <td class="px-6 py-4 text-gray-300">Se você acha que merece ser preso após todos os seus atos no mundo virtual, ligue para a polícia, você deve no mínimo ganhar pena preventiva.</td>
+                        </tr>
+                        <tr class="hover:bg-gray-800 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap text-xl font-semibold text-primary">192 - Hospital</td>
+                            <td class="px-6 py-4 text-gray-300">Teve um espasmo com todas as luzes de NeonPunk 2088? Esse é número certo, mas cuidado, acho que sua mãe não vai mais deixar você jogar depois disso.</td>
+                        </tr>
+                        <tr class="hover:bg-gray-800 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap text-xl font-semibold text-primary">193 - Bombeiros</td>
+                            <td class="px-6 py-4 text-gray-300">Caso você tenha contraído a GamerLeg e não consiga mais sair da cadeira, acho que você vai precisa da ajuda dos bombeiros.</td>
+                        </tr>
+                        <tr class="hover:bg-gray-800 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap text-xl font-semibold text-primary">188 - Valorização da Vida</td>
+                            <td class="px-6 py-4 text-gray-300">Esse é pra você que jogou 2785 horas de InCasa. (Sério, procure ajuda se precisar!)</td>
+                        </tr>
+                        <tr class="hover:bg-gray-800 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap text-xl font-semibold text-primary">181 - Disque Denúncia</td>
+                            <td class="px-6 py-4 text-gray-300">Caso você se sinta influênciado por algum de nossos jogos à cometer qualquer tipo de crime, ligue antes e cometa depois, ou o contrário, você que decide (Só não deixa o Lula descobrir).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-            <p>Se você enfrentar alguma das situações absurdas e caóticas que nossos jogos causaram, aqui estão os números de emergência que podem ajudar. (Ou não, você já foi avisado!)</p>
-
-            <table border="1">
-                <tr>
-                    <th><h1>Número de Emergência</h1></th>
-                    <th><h1>Descrição</h1></th>
-                </tr>
-                <tr>
-                    <td>190 - Polícia</td>
-                    <td>Se você acha que merece ser preso após todos os seus atos no mundo virtual, ligue para a polícia, você deve no mínimo ganhar pena preventiva.</td>
-                </tr>
-                <tr>
-                    <td>192 - Hospital</td>
-                    <td>Teve um espasmo com todas as luzes de NeonPunk 2088? Esse é número certo, mas cuidado, acho que sua mãe não vai mais deixar você jogar depois disso.</td>
-                </tr>
-                <tr>
-                    <td>193 - Bombeiros</td>
-                    <td>Caso você tenha contraído a GamerLeg e não consiga mais sair da cadeira, acho que você vai precisa da ajuda dos bombeiros.</td>
-                </tr>
-                <tr>
-                    <td>188 - Valorização da Vida</td>
-                    <td>Esse é pra você que jogou 2785 horas de InCasa.</td>
-                </tr>
-                <tr>
-                    <td>181 - Disque Denúncia</td>
-                    <td>Caso você se sinta influênciado por algum de nossos jogos à cometer qualquer tipo de crime, ligue antes e cometa depois, ou o contrário, você que decide (Só não deixa o Lula descobrir).</td>
-                </tr>
-            </table>
-
-            <p>Esses números podem ou não ser úteis para você, mas caso você realmente se sentir mal, talvez seja hora de desligar um pouco o PC e ir tocar a grama.</p>
-        </div>
+            <p class="mt-12 text-center text-lg text-gray-400 leading-relaxed">
+                Esses números podem ou não ser úteis para você, mas caso você realmente se sentir mal, talvez seja hora de desligar um pouco o PC e ir tocar a grama. <br> Ou comprar nosso próximo DLC: "Terapia Simulada por IA Caótica".
+            </p>
+        </section>
     </main>
 
+    <footer class="bg-card border-t border-gray-700 mt-16">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            <p>© <span id="currentYear"></span> Vapour. Todos os direitos (questionavelmente) reservados.</p>
+            <p class="text-sm">Criado na base do ódio e café por Gustavo.</p>
+        </div>
+    </footer>
+    <script> /* Mesmo JS do index.html */
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        document.querySelectorAll('header a[href^="#"], #mobile-menu a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    if(mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                    const targetElement = document.querySelector(this.getAttribute('href'));
+                    if(targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>

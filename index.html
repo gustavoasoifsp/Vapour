@@ -2,84 +2,156 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="Imgs/Icone do Site.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-    <title>Bem-vindo(a) ao Vapour</title>
+    <title>Bem-vindo(a) ao Vapour - Estilo AuraFlow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Bebas+Neue&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- <link rel="icon" href="Imgs/Icone do Site.ico"> -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#8B5CF6',
+              secondary: '#EC4899',
+              dark: '#111827',
+              light: '#F9FAFB',
+              accent: '#10B981',
+              card: '#1f2937',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Bebas Neue', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
 </head>
-<body>
+<body class="bg-dark text-light font-sans antialiased">
 
-    <header>
-        <div>
-            <a href="index.html"><img src="Imgs/Logo Vapour Colorível.png" alt="Vapour" height="100px"></a>
+    <!-- Cabeçalho / Navbar -->
+    <header class="bg-dark shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="Imgs/Logo Vapour Colorível.png" alt="Vapour Logo" class="h-12 md:h-16"> <!-- Ajuste altura aqui -->
+                <span class="text-3xl md:text-4xl font-heading text-primary hover:text-secondary transition-colors">Vapour</span>
+            </a>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="text-lg hover:text-primary transition-colors">HOME</a>
+                <a href="comunidade.html" class="text-lg hover:text-primary transition-colors">COMUNIDADE</a>
+                <a href="sobre.html" class="text-lg hover:text-primary transition-colors">SOBRE</a>
+                <a href="suporte.html" class="text-lg hover:text-primary transition-colors">SUPORTE</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-light focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
         </div>
-        <div>
-            <h1><a href="index.html">Vapour</a></h1>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-card">
+            <a href="index.html" class="block px-6 py-3 hover:bg-gray-700 transition-colors">HOME</a>
+            <a href="comunidade.html" class="block px-6 py-3 hover:bg-gray-700 transition-colors">COMUNIDADE</a>
+            <a href="sobre.html" class="block px-6 py-3 hover:bg-gray-700 transition-colors">SOBRE</a>
+            <a href="suporte.html" class="block px-6 py-3 hover:bg-gray-700 transition-colors rounded-b-lg">SUPORTE</a>
         </div>
     </header>
 
-    <nav>
-        <a href="index.html">HOME</a>    <a href="comunidade.html">COMUNIDADE</a>    <a href="sobre.html">SOBRE</a>       <a href="suporte.html">SUPORTE</a>
-    </nav>
+    <main class="container mx-auto px-6 py-12">
+        <section class="text-center mb-16">
+            <h1 class="text-5xl md:text-7xl font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-6">
+                Bem-vindo ao Vapour!
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+                Onde a sanidade é opcional e os jogos são... questionáveis. Explore nossa coleção de obras-primas duvidosas.
+            </p>
+        </section>
 
-    <br>
-
-    <main>
-        <!-- NeonPunk 2088 -->
-        <div class="neonpunk">
-            <div class="imagem">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <!-- NeonPunk 2088 -->
+            <div class="bg-card rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
                 <a href="Neonpunk.html">
-                    <img src="Imgs/NeonPunk.jpg" alt="NeonPunk 2088">
+                    <img src="Imgs/NeonPunk.jpg" alt="NeonPunk 2088" class="w-full h-64 object-cover">
                 </a>
+                <div class="p-6 md:p-8">
+                    <h2 class="text-3xl font-heading text-accent mb-3"><a href="Neonpunk.html" class="hover:underline">NeonPunk 2088</a></h2>
+                    <p class="text-gray-300 mb-4 leading-relaxed">Um FPS em primeira pessoa que se passa em 2088 onde as mega corporações usam de padrões de luz neon para controlar seus clientes e faze-los gastar e GASTAR cada vez mais.</p>
+                    <a href="Neonpunk.html" class="inline-block bg-gradient-to-r from-primary to-secondary text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300">Ver Detalhes</a>
+                </div>
             </div>
-            <div class="texto">
-                <h1>NeonPunk 2088</h1>
-                <p>Um FPS em primeira pessoa que se passa em 2088 onde as mega corporações usam de padrões de luz neon para controlar seus clientes e faze-los gastar e GASTAR cada vez mais.</p>
-            </div>
-        </div>
 
-        <!-- PâncreasWorld -->
-        <div class="pancreasworld">
-            <div class="imagem">
+            <!-- PâncreasWorld -->
+            <div class="bg-card rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
                 <a href="pancreasworld.html">
-                    <img src="Imgs/PANCREASWORLD.png" alt="PANCREASWORLD">
+                    <img src="Imgs/PANCREASWORLD.png" alt="PANCREASWORLD" class="w-full h-64 object-cover">
                 </a>
+                <div class="p-6 md:p-8">
+                    <h2 class="text-3xl font-heading text-accent mb-3"><a href="pancreasworld.html" class="hover:underline">PÂNCREASWORLD</a></h2>
+                    <p class="text-gray-300 mb-4 leading-relaxed">Um simulador de colônias onde seu objetivo é virar o maior traficante de órgãos e conseguir suprimentos o suficiente para construir uma nave e fugir do FBI.</p>
+                    <a href="pancreasworld.html" class="inline-block bg-gradient-to-r from-primary to-secondary text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300">Ver Detalhes</a>
+                </div>
             </div>
-            <div class="texto">
-                <h1>PÂNCREASWORLD</h1>
-                <p>Um simulador de colônias onde seu objetivo é virar o maior traficante de órgãos e conseguir suprimentos o suficiente para construir uma nave e fugir do FBI.</p>
-            </div>
-        </div>
 
-        <!--Grandes Tatuadores Anônimos-->
-        <div class="GTA">
-            <div class="imagem">
+            <!--Grandes Tatuadores Anônimos-->
+            <div class="bg-card rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
                 <a href="GTA.html">
-                    <img src="Imgs/GTA.jpg" alt="Grandes Tatuadores Anônimos">
+                    <img src="Imgs/GTA.jpg" alt="Grandes Tatuadores Anônimos" class="w-full h-64 object-cover">
                 </a>
+                <div class="p-6 md:p-8">
+                    <h2 class="text-3xl font-heading text-accent mb-3"><a href="GTA.html" class="hover:underline">Grandes Tatuadores Anônimos</a></h2>
+                    <p class="text-gray-300 mb-4 leading-relaxed">Construa um império como Francisco, Tiago e Matheus, um grupo de tatuadores ilegais que burlam as regras de decência, higiênie e não pagam imposto!</p>
+                    <a href="GTA.html" class="inline-block bg-gradient-to-r from-primary to-secondary text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300">Ver Detalhes</a>
+                </div>
             </div>
-            <div class="texto">
-                <h1>Grandes Tatuadores Anônimos</h1>
-                <p>Construa um império como Francisco, Tiago e Matheus, um grupo de tatuadores ilegais que burlam as regras de decência, higiênie e não pagam imposto!</p>
-            </div>
-        </div>
 
-        <!--InCasa-->
-        <div class="incasa">
-            <div class="imagem">
+            <!--InCasa-->
+            <div class="bg-card rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
                 <a href="InCasa.html">
-                    <img src="Imgs/InCasa.png" alt="incasa">
+                    <img src="Imgs/InCasa.png" alt="InCasa" class="w-full h-64 object-cover">
                 </a>
-            </div>
-            <div class="texto">
-                <h1>InCasa</h1>
-                <p>Um simulador de vida onde você pode bater o carro, brigar com o chefe, roubar velhinhas e, no final do dia, jogar esse jogo para escapar dessa vida maravilhosa. Porque, afinal, por que se esforçar para ter uma vida real boa quando você pode apenas viver a vida de outras pessoas em um joguinho de computador?</p>
+                <div class="p-6 md:p-8">
+                    <h2 class="text-3xl font-heading text-accent mb-3"><a href="InCasa.html" class="hover:underline">InCasa</a></h2>
+                    <p class="text-gray-300 mb-4 leading-relaxed">Um simulador de vida onde você pode bater o carro, brigar com o chefe, roubar velhinhas e, no final do dia, jogar esse jogo para escapar dessa vida maravilhosa.</p>
+                    <a href="InCasa.html" class="inline-block bg-gradient-to-r from-primary to-secondary text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300">Ver Detalhes</a>
+                </div>
             </div>
         </div>
     </main>
+
+    <footer class="bg-card border-t border-gray-700 mt-16">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            <p>© <span id="currentYear"></span> Vapour. Todos os direitos (questionavelmente) reservados.</p>
+            <p class="text-sm">Criado na base do ódio e café por Gustavo.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Smooth scroll for anchor links & close mobile menu on click
+        document.querySelectorAll('header a[href^="#"], #mobile-menu a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    if(mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden'); // Close mobile menu
+                    }
+                    const targetElement = document.querySelector(this.getAttribute('href'));
+                    if(targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>

@@ -2,51 +2,84 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="Imgs/Icone do Site.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-    <title>Grandes Tatuadores Anônimos no Vapour</title>
+    <title>Grandes Tatuadores Anônimos no Vapour (Estilo AuraFlow)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Bebas+Neue&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- <link rel="icon" href="Imgs/Icone do Site.ico"> -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#8B5CF6',
+              secondary: '#EC4899',
+              dark: '#111827',
+              light: '#F9FAFB',
+              accent: '#10B981',
+              card: '#1f2937',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Bebas Neue', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+        .prose-custom ul { list-style-type: disc; margin-left: 1.5em; }
+        .prose-custom li { margin-bottom: 0.5em; }
+        .prose-custom strong { color: #a78bfa; /* primary-light variation */ }
+        .prose-custom .highlight { color: #f472b6; /* secondary-light variation */ }
+    </style>
 </head>
-<body>
+<body class="bg-dark text-light font-sans antialiased">
 
-    <header>
-        <div>
-            <a href="index.html"><img src="Imgs/Logo Vapour Colorível.png" alt="Vapour" height="100px"></a>
+    <!-- Cabeçalho / Navbar (Idêntico ao index.html) -->
+    <header class="bg-dark shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="Imgs/Logo Vapour Colorível.png" alt="Vapour Logo" class="h-12 md:h-16">
+                <span class="text-3xl md:text-4xl font-heading text-primary hover:text-secondary transition-colors">Vapour</span>
+            </a>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="text-lg hover:text-primary transition-colors">HOME</a> <!-- Destaque página atual se necessário -->
+                <a href="comunidade.html" class="text-lg hover:text-primary transition-colors">COMUNIDADE</a>
+                <a href="sobre.html" class="text-lg hover:text-primary transition-colors">SOBRE</a>
+                <a href="suporte.html" class="text-lg hover:text-primary transition-colors">SUPORTE</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-light focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
         </div>
-        <div>
-            <h1><a href="index.html">Vapour</a></h1>
+        <div id="mobile-menu" class="hidden md:hidden bg-card">
+            <a href="index.html" class="block px-6 py-3 hover:bg-gray-700 transition-colors">HOME</a>
+            <a href="comunidade.html" class="block px-6 py-3 hover:bg-gray-700 transition-colors">COMUNIDADE</a>
+            <a href="sobre.html" class="block px-6 py-3 hover:bg-gray-700 transition-colors">SOBRE</a>
+            <a href="suporte.html" class="block px-6 py-3 hover:bg-gray-700 transition-colors rounded-b-lg">SUPORTE</a>
         </div>
     </header>
 
-    <nav>
-        <a href="index.html">HOME</a>    <a href="comunidade.html">COMUNIDADE</a>    <a href="sobre.html">SOBRE</a>       <a href="suporte.html">SUPORTE</a>
-    </nav>
+    <main class="container mx-auto px-6 py-12">
+        <article class="bg-card p-8 md:p-12 rounded-xl shadow-2xl">
+            <img src="Imgs/GTA.jpg" alt="Grandes Tatuadores Anônimos" class="w-full h-auto md:h-[500px] object-cover rounded-lg mb-8 shadow-lg">
 
-    <br>
+            <h1 class="text-4xl md:text-6xl font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-6">
+                Grandes Tatuadores Anônimos
+            </h1>
 
-    <main>
-        <div class="GTA">
-            <div class="imagem">
-                <a href="GTA.html">
-                    <img src="Imgs/GTA.jpg" alt="Grandes Tatuadores Anônimos" width="1000px" height="500px">
-                </a>
-            </div>
-            <div class="texto">
-                <h1>Grandes Tatuadores Anônimos</h1>
+            <div class="prose-custom text-gray-300 leading-relaxed text-lg space-y-6">
                 <p>Em Grandes Tatuadores Anônimos, você não está apenas criando tatuagens: você está construindo um império de agulhas, tinta e transgressão, em um mercado clandestino onde higiene é um conceito distante, regras não existem e impostos são apenas uma piada. O objetivo? Construir uma rede de tatuadores ilegais com Francisco, Tiago e Matheus, e deixar sua marca... literalmente, nas piores pessoas possíveis.</p>
 
-                <p>Prepare-se para:</p>
+                <h2 class="text-2xl md:text-3xl font-heading text-accent mt-8 mb-4">Prepare-se para:</h2>
                 <ul>
                     <li><strong>Dominar o mercado negro de tatuagens:</strong> Crie designs ousados para os clientes mais desesperados, desde aquele cara que quer uma tatuagem do nome da ex no pescoço, até o cara que acha que tatuar o rosto inteiro de um dragão é uma boa ideia.</li>
                     <li><strong>Burlar tudo e todos:</strong> O que é higiene quando você tem um estúdio escondido em um porão? E impostos? Só existe uma coisa que você paga, e é uma garrafa de vodka para dar aquele "toque especial" nas tatuagens.</li>
                     <li><strong>Fazer negócios com os piores tipos de pessoas:</strong> Construa uma rede de tatuadores ilegais e se envolva em trocas suspeitas de tintas, agulhas e contratos de exclusividade (porque ninguém mais vai querer trabalhar com você depois de ver suas tatuagens).</li>
                 </ul>
 
-                <p><strong>Características principais:</strong></p>
+                <h2 class="text-2xl md:text-3xl font-heading text-accent mt-8 mb-4">Características principais:</h2>
                 <ul>
                     <li><strong>Simulador de Império de Tatuagens Ilegais:</strong> Construa seu estúdio de tatuagens subterrâneo e gerencie uma equipe de tatuadores que fazem da ilegalidade a sua arte. Cada agulhada é uma oportunidade para crescer (ou acabar na cadeia).</li>
                     <li><strong>Mercado Sem Regras:</strong> Os clientes querem tatuagens ridículas, você tem as agulhas e a coragem de fazer qualquer coisa. Não importa o quão nojento, bizarro ou controverso seja, você vai tatuar tudo. E de graça? Imagina! Aqui, o dinheiro é só um bônus.</li>
@@ -56,10 +89,42 @@
 
                 <p>Se você sempre quis ser o tatuador que desafia todas as normas sociais e faz qualquer coisa pela grana, <span class="highlight">Grandes Tatuadores Anônimos</span> é o jogo para você. Prepare-se para um mercado onde o único limite é o tamanho da agulha, e a única coisa mais suja que sua maquína de tatuar é sua consciência.</p>
 
-                <a href="suporte.html" class="btn-comprar">Compre Agora - Apenas por tatuar a logo do jogo na testa!</a>
+                <div class="mt-10 text-center md:text-left">
+                    <a href="suporte.html" class="inline-block bg-gradient-to-r from-accent to-green-600 text-white font-bold text-xl px-10 py-4 rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+                        Compre Agora - Apenas por tatuar a logo do jogo na testa!
+                    </a>
+                </div>
             </div>
-        </div>
+        </article>
     </main>
 
+    <footer class="bg-card border-t border-gray-700 mt-16">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            <p>© <span id="currentYear"></span> Vapour. Todos os direitos (questionavelmente) reservados.</p>
+            <p class="text-sm">Criado na base do ódio e café por Gustavo.</p>
+        </div>
+    </footer>
+    <script> /* Mesmo JS do index.html */
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        document.querySelectorAll('header a[href^="#"], #mobile-menu a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    if(mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                    const targetElement = document.querySelector(this.getAttribute('href'));
+                    if(targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>

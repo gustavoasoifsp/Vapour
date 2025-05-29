@@ -2,67 +2,132 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="Imgs/Icone do Site.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-    <title>Sobre - Vapour</title>
+    <title>Sobre - Vapour (Estilo AuraFlow)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Bebas+Neue&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- <link rel="icon" href="Imgs/Icone do Site.ico"> -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#8B5CF6',
+              secondary: '#EC4899',
+              dark: '#111827',
+              light: '#F9FAFB',
+              accent: '#10B981',
+              card: '#1f2937',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Bebas Neue', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style> /* Estilos para listas e destaques no texto "prosa" */
+        .prose-custom ul { list-style-type: disc; margin-left: 1.5em; padding-left: 0.5em; }
+        .prose-custom li { margin-bottom: 0.75em; }
+        .prose-custom strong { color: #a78bfa; /* primary-light variation */ }
+        .prose-custom .rant { color: #f472b6; /* secondary-light variation */ font-weight: bold; }
+    </style>
 </head>
-<body>
+<body class="bg-dark text-light font-sans antialiased">
 
-    <header>
-        <div>
-            <a href="index.html"><img src="Imgs/Logo Vapour Colorível.png" alt="Vapour" height="100px"></a>
+    <!-- Cabeçalho / Navbar (Idêntico ao index.html) -->
+    <header class="bg-dark shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="Imgs/Logo Vapour Colorível.png" alt="Vapour Logo" class="h-12 md:h-16">
+                <span class="text-3xl md:text-4xl font-heading text-primary hover:text-secondary transition-colors">Vapour</span>
+            </a>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="text-lg hover:text-primary transition-colors">HOME</a>
+                <a href="comunidade.html" class="text-lg hover:text-primary transition-colors">COMUNIDADE</a>
+                <a href="sobre.html" class="text-lg text-primary font-semibold border-b-2 border-primary">SOBRE</a> <!-- Destaque página atual -->
+                <a href="suporte.html" class="text-lg hover:text-primary transition-colors">SUPORTE</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-light focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
         </div>
-        <div>
-            <h1><a href="index.html">Vapour</a></h1>
+        <div id="mobile-menu" class="hidden md:hidden bg-card">
+            <a href="index.html" class="block px-6 py-3 hover:bg-gray-700 transition-colors">HOME</a>
+            <a href="comunidade.html" class="block px-6 py-3 hover:bg-gray-700 transition-colors">COMUNIDADE</a>
+            <a href="sobre.html" class="block px-6 py-3 bg-gray-700 text-primary transition-colors">SOBRE</a>
+            <a href="suporte.html" class="block px-6 py-3 hover:bg-gray-700 transition-colors rounded-b-lg">SUPORTE</a>
         </div>
     </header>
 
-    <nav>
-        <a href="index.html">HOME</a>    <a href="comunidade.html">COMUNIDADE</a>    <a href="sobre.html">SOBRE</a>       <a href="suporte.html">SUPORTE</a>
-    </nav>
+    <main class="container mx-auto px-6 py-12">
+        <section class="bg-card p-8 md:p-12 rounded-xl shadow-2xl max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-8 text-center">
+                Sobre o Vapour (Ou: Um Grito de Socorro em Forma de Site)
+            </h1>
 
-    <br>
+            <div class="prose-custom text-gray-300 leading-relaxed text-lg space-y-6">
+                <p>Bem-vindo ao <strong>Vapour</strong>, onde a realidade é apenas uma sugestão e a diversão, uma obrigação. Se você está aqui, provavelmente está fugindo de algo. Talvez de uma vida de tédio, talvez do trabalho, ou talvez você só tenha clicado sem querer no link errado... não importa. O importante é que você chegou!</p>
 
-    <main>
-        <div class="texto">
-        <h1>Sobre o Vapour</h1>
+                <p>Este site foi criado por um estudante de Desenvolvimento de Sistemas Web (sim, eu mesmo). Minha missão? Criar o site mais absurdo e inútil da história da internet, tudo isso para cumprir uma atividade que o professor Ítalo nos deu. Porque, claro, na vida de um estudante, o único momento em que somos realmente criativos é quando estamos desesperados para passar na matéria.</p>
 
-        <p>Bem-vindo ao <strong>Vapour</strong>, onde a realidade é apenas uma sugestão e a diversão, uma obrigação. Se você está aqui, provavelmente está fugindo de algo. Talvez de uma vida de tédio, talvez do trabalho, ou talvez você só tenha clicado sem querer no link errado... não importa. O importante é que você chegou!</p>
+                <p>Agora, você deve estar se perguntando: "Quem é esse cara que fez isso?" A resposta é simples: eu sou eu (brincadeira.) sou um estudante tentando entender o que fazer da vida, e esse site é o reflexo da nossa jornada existencial. Se você acha que a vida está difícil, pelo menos você não sou eu tentando fazer um site e abrindo <span class="rant">23 (sim eu contei)</span> sites diferentes para tentar fazer um slider de imagens que você mesmo nem implementou porque você é <span class="rant">burro</span> e não aprendeu a programar UM SIMPLES SLIDER DE IMAGEM, QUEM QUE FOI GÊNIO DE CRIAR MAIS DE <span class="rant">10 MIL LINGUAGENS DE PROGRAMAÇÃO?!</span></p>
 
-        <p>Este site foi criado por um estudante de Desenvolvimento de Sistemas Web (sim, eu mesmo). Minha missão? Criar o site mais absurdo e inútil da história da internet, tudo isso para cumprir uma atividade que o professor Ítalo nos deu. Porque, claro, na vida de um estudante, o único momento em que somos realmente criativos é quando estamos desesperados para passar na matéria.</p>
+                <h2 class="text-2xl md:text-3xl font-heading text-accent mt-10 mb-4">Por que isso existe?</h2>
+                <ul>
+                    <li>Porque a única coisa pior do que ficar sentado numa sala tentando entender códigos HTML, CSS e JavaScript, é perceber que isso é o nosso trabalho agora.</li>
+                    <li>E esse site é a minha maneira de dizer: "Se eu não posso fazer um site sério, pelo menos vou tentar fazer você rir".</li>
+                    <li>Porque, se você acha que não tem mais esperanças, basta lembrar que algum dia você vai terminar o ensino médio e, com sorte, nunca mais ouvirá falar de Html quando na verdade você apenas queria aprender a fazer mods para o jogo quadrado.</li>
+                </ul>
 
-        <p>Agora, você deve estar se perguntando: "Quem é esse cara que fez isso?" A resposta é simples: eu sou eu (brincadeira.) sou um estudante tentando entender o que fazer da vida, e esse site é o reflexo da nossa jornada existencial. Se você acha que a vida está difícil, pelo menos você não sou eu tentando fazer um site e abrindo 23 (sim eu contei) sites diferentes para tentar fazer um slider de imagens que vocÇe mesmo nem implementou porque você é burro e não aprendeu a programar UM SIMPLES SLIDER DE IMAGEM, QUEM QUE FOI GÊNIO DE CRIAR MAIS DE 10 MIL LINGUAGENS DE PROGRAMAÇÃO?!</p>
+                <p>Se você chegou até aqui, parabéns! Isso significa que você passou da primeira página do google! Você já está imerso na maravilha do caos acadêmico. Ou talvez só esteja entediado e sem saber o que fazer. De qualquer forma, você encontrou o lugar certo.</p>
 
-        <p><strong>Por que isso existe?</strong></p>
-        <ul>
-            <li>Porque a única coisa pior do que ficar sentado numa sala tentando entender códigos HTML, CSS e JavaScript, é perceber que isso é o nosso trabalho agora.</li>
-            <li>E esse site é a minha maneira de dizer: "Se eu não posso fazer um site sério, pelo menos vou tentar fazer você rir".</li>
-            <li>Porque, se você acha que não tem mais esperanças, basta lembrar que algum dia você vai terminar o ensino médio e, com sorte, nunca mais ouvirá falar de Html quando na verdade você apenas queria aprender a fazer mods para o jogo quadrado.</li>
-        </ul>
+                <h2 class="text-2xl md:text-3xl font-heading text-accent mt-10 mb-4">O que você pode esperar de nós?</h2>
+                <ul>
+                    <li>Uma quantidade absurda de projetos malucos que, se algum dia funcionarem, vão provavelmente te fazer questionar sua sanidade.</li>
+                    <li>A certeza de que, na vida, o importante é seguir em frente, mesmo quando você não tem ideia de para onde está indo. Afinal, eu estou aqui apenas tentando descobrir como colocar um código que funcione.</li>
+                    <li>O lembrete de que, se você está preso numa rotina monótona e sem sentido, pelo menos tem esse site para lembrar que, sim, as coisas podem sempre ficar piores... ou mais engraçadas.</li>
+                </ul>
 
-        <p>Se você chegou até aqui, parabéns! Isso significa que você passou da primeira página do google! Você já está imerso na maravilha do caos acadêmico. Ou talvez só esteja entediado e sem saber o que fazer. De qualquer forma, você encontrou o lugar certo.</p>
+                <p>Então, se você está aqui para entender o meu código, eu lamento informar que você provavelmente vai sair ainda mais confuso do que entrou. Mas, ei, pelo menos você se divertiu um pouco, não é? <span class="rant">NÃO É?</span></p>
 
-        <p><strong>O que você pode esperar de nós?</strong></p>
-        <ul>
-            <li>Uma quantidade absurda de projetos malucos que, se algum dia funcionarem, vão provavelmente te fazer questionar sua sanidade.</li>
-            <li>A certeza de que, na vida, o importante é seguir em frente, mesmo quando você não tem ideia de para onde está indo. Afinal, eu estou aqui apenas tentando descobrir como colocar um código que funcione.</li>
-            <li>O lembrete de que, se você está preso numa rotina monótona e sem sentido, pelo menos tem esse site para lembrar que, sim, as coisas podem sempre ficar piores... ou mais engraçadas.</li>
-        </ul>
+                <p class="mt-10 pt-6 border-t border-gray-700 font-heading text-2xl text-center">
+                    <strong>Vapour:</strong> Porque a vida já é difícil o suficiente, então por que não jogar tudo pro alto e fazer uma paródia do Steam que todo mundo chama de "A Steam"?
+                </p>
+            </div>
 
-        <p>Então, se você está aqui para entender o meu código, eu lamento informar que você provavelmente vai sair ainda mais confuso do que entrou. Mas, ei, pelo menos você se divertiu um pouco, não é? NÃO É?</p>
-
-        <p><strong>Vapour:</strong> Porque a vida já é difícil o suficiente, então por que não jogar tudo pro alto e fazer uma paródia do Steam que todo mundo chama de "A Steam"?</p>
-    </div>
-    
-    <br>
-
-    <p>Por Gustavo de Alcantara Sanches Oliveira - 1º IFSP - Desenvolvimento de Sistemas Web: Professor Itálo.</p>
+            <p class="mt-12 text-center text-sm text-gray-500">Por Gustavo de Alcantara Sanches Oliveira - 1º IFSP - Desenvolvimento de Sistemas Web: Professor Itálo.</p>
+        </section>
     </main>
 
+    <footer class="bg-card border-t border-gray-700 mt-16">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            <p>© <span id="currentYear"></span> Vapour. Todos os direitos (questionavelmente) reservados.</p>
+            <p class="text-sm">Criado na base do ódio e café por Gustavo.</p>
+        </div>
+    </footer>
+    <script> /* Mesmo JS do index.html */
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        document.querySelectorAll('header a[href^="#"], #mobile-menu a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    if(mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                    const targetElement = document.querySelector(this.getAttribute('href'));
+                    if(targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
